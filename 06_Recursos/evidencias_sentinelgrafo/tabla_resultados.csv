@@ -1,0 +1,7 @@
+﻿Caso,Modelo,Accuracy,Precision,Recall,F1-score
+Caso 1: Disaster Tweets,Baseline (Log. Reg.),0.7876,0.7920,0.7876,0.7868
+Caso 1: Disaster Tweets,GraphSAGE,0.7746,0.7772,0.7746,0.7741
+Caso 1: Disaster Tweets,GCN,0.7571,0.7635,0.7570,0.7556
+Caso 2: AG News,Baseline (Log. Reg.),0.8915,0.8909,0.8915,0.8911
+Caso 2: AG News,GraphSAGE,0.8773,0.8771,0.8773,0.8770
+Caso 2: AG News,GCN,0.8627,0.8624,0.8627,0.8624
