@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 510" width="100%" style="font-family:'Segoe UI',Arial,sans-serif">
+<defs>
+<filter id="s"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/></filter>
+<linearGradient id="gh" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+<linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#bfdbfe"/></linearGradient>
+<linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dcfce7"/><stop offset="100%" stop-color="#bbf7d0"/></linearGradient>
+<linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fef2f2"/><stop offset="100%" stop-color="#fecaca"/></linearGradient>
+<linearGradient id="go" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffedd5"/><stop offset="100%" stop-color="#fed7aa"/></linearGradient>
+<linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f3e8ff"/><stop offset="100%" stop-color="#e9d5ff"/></linearGradient>
+<linearGradient id="gt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ccfbf1"/><stop offset="100%" stop-color="#99f6e4"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="700" height="510" fill="#f8fafc" rx="10"/>
+<rect x="10" y="8" width="680" height="34" fill="url(#gh)" rx="6"/>
+<text x="350" y="30" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Truco de Renormalizacion (GCN - Kipf &amp; Welling)</text>
+<marker id="a" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+<rect x="20" y="55" width="660" height="105" fill="#fff" stroke="#e2e8f0" stroke-width="1" rx="8"/>
+<rect x="25" y="60" width="650" height="26" fill="url(gb)" rx="5"/><text x="350" y="78" text-anchor="middle" fill="#1e3a5f" font-size="12" font-weight="bold">Ecuacion original GCN</text>
+<text x="350" y="110" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">H(k+1) = sigma( A_hat * H(k) * W(k) )</text>
+<text x="350" y="135" text-anchor="middle" fill="#475569" font-size="11">A_hat = A + I_N (matriz de adyacencia + self-loops)</text>
+<line x1="350" y1="165" x2="350" y2="175" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="20" y="185" width="660" height="105" fill="#fff" stroke="#e2e8f0" stroke-width="1" rx="8"/>
+<rect x="25" y="190" width="650" height="26" fill="url(go)" rx="5"/><text x="350" y="208" text-anchor="middle" fill="#1e3a5f" font-size="12" font-weight="bold">Problema de escala</text>
+<text x="350" y="240" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">Multiplicar por A_hat escala incorrectamente los grados</text>
+<text x="350" y="265" text-anchor="middle" fill="#475569" font-size="11">Nodos con alto grado dominan la agregacion</text>
+<line x1="350" y1="295" x2="350" y2="305" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="20" y="315" width="660" height="105" fill="#fff" stroke="#e2e8f0" stroke-width="1" rx="8"/>
+<rect x="25" y="320" width="650" height="26" fill="url(gp)" rx="5"/><text x="350" y="338" text-anchor="middle" fill="#1e3a5f" font-size="12" font-weight="bold">Solucion: Renormalizacion</text>
+<text x="350" y="370" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="bold">H(k+1) = sigma( D_hat^-1/2 * A_hat * D_hat^-1/2 * H(k) * W(k) )</text>
+<text x="350" y="395" text-anchor="middle" fill="#475569" font-size="11">D_hat_ii = SUM_j(A_hat_ij) (normaliza por grado)</text>
+<rect x="40" y="450" width="620" height="50" fill="url(gg)" rx="8" stroke="#86efac" stroke-width="2"/><text x="350" y="467" text-anchor="middle" fill="#166534" font-size="11" font-weight="bold">&#10003; Normaliza por grado: cada vecino influye segun su nivel de conectividad</text>
+<text x="350" y="485" text-anchor="middle" fill="#166534" font-size="11">&#10003; Evita que nodos con muchos vecinos (hub nodes) dominen la agregacion</text>
+
+</svg>

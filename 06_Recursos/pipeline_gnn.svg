@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 280" width="100%" style="font-family:'Segoe UI',Arial,sans-serif">
+<defs>
+<filter id="s"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/></filter>
+<linearGradient id="gh" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#3b82f6"/></linearGradient>
+<linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#bfdbfe"/></linearGradient>
+<linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dcfce7"/><stop offset="100%" stop-color="#bbf7d0"/></linearGradient>
+<linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fef2f2"/><stop offset="100%" stop-color="#fecaca"/></linearGradient>
+<linearGradient id="go" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffedd5"/><stop offset="100%" stop-color="#fed7aa"/></linearGradient>
+<linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f3e8ff"/><stop offset="100%" stop-color="#e9d5ff"/></linearGradient>
+<linearGradient id="gt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ccfbf1"/><stop offset="100%" stop-color="#99f6e4"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1050" height="280" fill="#f8fafc" rx="10"/>
+<rect x="10" y="8" width="1030" height="34" fill="url(#gh)" rx="6"/>
+<text x="525" y="30" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Pipeline de SentinelGrafo</text>
+<marker id="a" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+<rect x="75" y="65" width="140" height="70" fill="url(go)" rx="35" filter="url(#s)"/><text x="145" y="92" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Documento</text>
+<text x="145" y="110" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">texto crudo</text>
+<line x1="210" y1="100" x2="222" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="70" y="150" width="150" height="48" fill="url(gb)" rx="6" stroke="#bfdbfe" stroke-width="1"/><text x="145" y="169" text-anchor="middle" fill="#1e40af" font-size="10">Entrada:</text>
+<text x="145" y="183" text-anchor="middle" fill="#1e40af" font-size="10">texto plano</text>
+<rect x="227" y="65" width="140" height="70" fill="url(gb)" rx="35" filter="url(#s)"/><text x="297" y="92" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Limpieza y</text>
+<text x="297" y="110" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Tokenizacion</text>
+<line x1="362" y1="100" x2="374" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="222" y="150" width="150" height="48" fill="url(gb)" rx="6" stroke="#bfdbfe" stroke-width="1"/><text x="297" y="169" text-anchor="middle" fill="#1e40af" font-size="10">Stopwords,</text>
+<text x="297" y="183" text-anchor="middle" fill="#1e40af" font-size="10">stemming</text>
+<rect x="379" y="65" width="140" height="70" fill="url(gp)" rx="35" filter="url(#s)"/><text x="449" y="92" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">TF-IDF</text>
+<text x="449" y="110" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Vectorizacion</text>
+<line x1="514" y1="100" x2="526" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="374" y="150" width="150" height="48" fill="url(gb)" rx="6" stroke="#bfdbfe" stroke-width="1"/><text x="449" y="169" text-anchor="middle" fill="#1e40af" font-size="10">5000 dims,</text>
+<text x="449" y="183" text-anchor="middle" fill="#1e40af" font-size="10">L2 norm</text>
+<rect x="531" y="65" width="140" height="70" fill="url(gt)" rx="35" filter="url(#s)"/><text x="601" y="92" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Grafo k-NN</text>
+<text x="601" y="110" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">(coseno)</text>
+<line x1="666" y1="100" x2="678" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="526" y="150" width="150" height="48" fill="url(gb)" rx="6" stroke="#bfdbfe" stroke-width="1"/><text x="601" y="169" text-anchor="middle" fill="#1e40af" font-size="10">k=15 vecinos,</text>
+<text x="601" y="183" text-anchor="middle" fill="#1e40af" font-size="10">coseno</text>
+<rect x="683" y="65" width="140" height="70" fill="url(gg)" rx="35" filter="url(#s)"/><text x="753" y="92" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">GNN</text>
+<text x="753" y="110" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">GCN/SAGE</text>
+<line x1="818" y1="100" x2="830" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#a)"/>
+<rect x="678" y="150" width="150" height="48" fill="url(gb)" rx="6" stroke="#bfdbfe" stroke-width="1"/><text x="753" y="169" text-anchor="middle" fill="#1e40af" font-size="10">2 capas,</text>
+<text x="753" y="183" text-anchor="middle" fill="#1e40af" font-size="10">64 canales</text>
+<rect x="835" y="65" width="140" height="70" fill="url(gr)" rx="35" filter="url(#s)"/><text x="905" y="92" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Clase</text>
+<text x="905" y="110" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Predicha</text>
+<rect x="830" y="150" width="150" height="48" fill="url(gb)" rx="6" stroke="#bfdbfe" stroke-width="1"/><text x="905" y="169" text-anchor="middle" fill="#1e40af" font-size="10">Softmax</text>
+<text x="905" y="183" text-anchor="middle" fill="#1e40af" font-size="10">binario</text>
+<rect x="30" y="215" width="990" height="40" fill="url(gb)" rx="8" stroke="#93c5fd" stroke-width="1"/><text x="525" y="234" text-anchor="middle" fill="#1e3a5f" font-size="11">Pipeline de extremo a extremo: desde texto crudo hasta clasificacion utilizando Graph Neural Networks</text>
+
+</svg>
